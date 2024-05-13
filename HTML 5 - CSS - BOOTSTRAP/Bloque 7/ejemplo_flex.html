@@ -2,62 +2,45 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ejemplo_flex</title>
+    <title>Document</title>
     <style type="text/css">
-        *{margin: 0; outline: solid;}
+        *{margin:0; outline: solid;}
         .soyflex{
             display: flex;
-            flex-flow: column;
-            height: 100vh;
+            flex-flow: column nowrap;
+            height:100vh; 
         }
-
-        #head{background: red; flex-basis: 20%;}
-        #cuerpo{background: blue; flex-basis: 70%;}
-        #pie{background: green; flex-basis: 10%;}
+        #head{background: red; flex-basis:20%;}
+        #cuerpo{background: blue;flex-basis:70%; }
+        #pie{background: green;flex-basis:10%}
 
         .subflex{
-            display: flex;
-            height: 100%;
-            align-items: stretch;
+            display:flex;
+            flex-flow: row nowrap; /* son valores por defecto */
+            height:100%;
+            align-items:stretch;
         }
-
-        .subflex div:nth-of-type(1){flex-basis: 20%; background: pink; order: 2;}
-        .subflex div:nth-of-type(2){flex-basis: 60%; background: yellow; order: 1;}
-        .subflex div:nth-of-type(3){flex-basis: 20%; background: rebeccapurple; order: 0;}
-
+        .subflex div:nth-of-type(1){flex-basis:20%;background:pink;order:2;}
+        .subflex div:nth-of-type(2){flex-basis:60%;background: yellow;order:1;}
+        .subflex div:nth-of-type(3){flex-basis:20%;background:rebeccapurple; order:0;}
     </style>
-
 </head>
-
 <body>
-
     <div class="soyflex">
-
         <div id="head">CABECERA</div>
-
         <div id="cuerpo">
-
             
-
             <div class="subflex">
-
                 <div>LAT2</div>
-
                 <div>MAIN</div>
-
                 <div>LAT</div>
-
             </div>
-
             
-
         </div>
-
         <div id="pie">PIE</div>
-
     </div>
-
+    
 </body>
-
 </html>

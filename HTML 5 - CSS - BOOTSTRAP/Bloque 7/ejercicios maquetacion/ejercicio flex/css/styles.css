@@ -1,0 +1,159 @@
+/* REGLAS GENERALES */
+
+@font-face {
+    font-family: 'Conv_Praise-Regular';
+    src: url('../fonts');
+    src: local('☺'), url('../fonts/Praise-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    font-family: Conv_Praise-Regular, sans-serif;
+    font-weight: 300;
+    color: #666666;
+
+}
+
+body {
+    margin: 0;
+}
+
+ul,ol{list-style:none;}
+
+/******* MAQUETACIÓN GENERAL ********/ 
+
+.container {
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    border-bottom: 1px solid #aaaaaa;
+    justify-content: center;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin: 0 0 1rem;
+}
+
+/* CONTENEDOR CENTRAL */
+.contenedor-central {
+    display: flex;
+    margin-top: .5rem;
+}
+
+/* NAV */
+nav {
+    flex-basis: 20%;
+    padding: 1rem 0 0 1rem;
+}
+
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+nav ul li {
+    line-height: 2rem;
+}
+
+nav ul li:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+/* SECTION */
+.contenedor-central section {
+    display: flex;
+    flex-flow: row wrap;
+    flex-basis: 80%;
+}
+
+.contenedor-central section article {
+    /*display: flex;
+    justify-content: space-between;
+    flex-flow: column;
+    align-items: center;*/
+    padding: 1rem;
+    border: 1px solid #aaaaaa;
+    border-radius: 10px;
+    margin: .5rem;
+}
+
+.contenedor-central section article:first-child {
+    flex: 1 1 400px;
+}
+
+.contenedor-central section article:nth-of-type(2){
+    flex: 1 1 300px;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+}
+
+
+
+.contenedor-central section article:nth-of-type(3),
+.contenedor-central section article:nth-of-type(4),
+.contenedor-central section article:nth-of-type(5){
+    flex: 1 1 200px;
+}
+
+
+
+.contenedor-central section article img {
+    border-radius: 10px;
+    width: 100%;
+}
+
+article h4 {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+
+/* FOOTER */
+
+footer {
+    border-top: 1px solid #aaaaaa;
+    margin-top: .5rem;
+    display: flex;
+}
+
+.calle {
+    flex: 1;
+}
+
+.texto-footer{
+    flex: 8;
+    text-align: center;
+}
+
+.redes {
+    flex: 1;
+    display: flex;
+    align-items:flex-end;
+    justify-content: flex-end;
+}
+
+.redes img {
+    margin-left: .3rem;
+    width: 50px;
+}
+

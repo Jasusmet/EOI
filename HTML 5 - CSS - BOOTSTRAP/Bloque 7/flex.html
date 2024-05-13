@@ -2,130 +2,120 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>flex</title>
+    <title>Document</title>
     <style type="text/css">
-        *{outline: solid}
+        *{outline:solid}
 
-        /* EJEMPLO USANDO LAS PROPIEDADES DEL CONTAINER FLEX */
+        /* EJEMPLO USANDO LAS PROPIEDADES DEL CONTAINER FLEX (PADRE) */
 
         .contenedor-flex div{background: red;}
         .contenedor-flex{
-            height: 200px;
-            /* Le aplica flex al contenedor */
+            height:200px;
+            /* le aplica flex al contenedor */
             display: flex;
 
-            /* dirección del eje principal */
+            /* dirección eje principal - por defecto: row */
             flex-direction: row;
 
-            /* más de 1 línea/columna o no */
+            /* más de 1 línea/columna o no - por defecto: nowrap */
             flex-wrap: wrap;
-
-            /* shortcut de direction y wrap */
-            flex-flow: row nowrap;
+            
+            /* shorthand de direction y wrap */
+            flex-flow: row wrap;
 
             /* alineamiento en eje principal */
-            justify-content: space-evenly;
+            justify-content:space-evenly;
 
             /* alineamiento en eje secundario */
-            align-items: flex-end;
+            align-items:stretch;
 
             /* alineamientos de lineas cuando hay espacio
             libre en el secondary axis - sólo si hay más de 1 línea */
-            align-content: stretch;
+            align-content: stretch;            
+       }
+
+       /* EJEMPLO - TEXTO CENTRADO EN HORIZONTAL Y VERTICAL */
+       .container-flex{
+        width:80%; height:60vh; 
+        display: flex;
+        /* flex-flow: row nowrap; - SI SON LOS VALORES POR DEFECTO, PODEMOS OBVIAR */
+        justify-content: center;
+        align-items: center;
         }
 
-        /* EJEMPLO - TEXTO CENTRADO EN HORIZONTAL Y VERTICAL */
-        .container-flex{
-            width: 80%; height: 60vh;
-            display: flex;
-            /*flex flow: row nowrap; - SI SON LOS VALORES POR DEFECTO, PODEMOS OBVIAR */
-            justify-content: center;
-            align-items: center;
-        }
-
-        /* USANDO LAS PROPIEDAS DE FLEX ITEMS (HIJOS) */
+        /* USANDO LAS PROPIEDADES DE FLEX ITEMS (HIJOS) */  
         .cont-flex{
-            height: 100px;
-            display: flex;
+            height:100px;
+            display:flex;
             align-items: center;
             justify-content: center;
             /* espacio entre flex items */
-            gap: 10px;
+            gap:10px;
         }
-
         #item1{
             /* orden del elemento */
-            order: 10;
+            order:0;
             /* si sobra espacio, peso para repartirlo */
             flex-grow: 1;
             /* capacidad para encogerse si falta espacio */
             flex-shrink: 5;
-            /* tamaño por defecto antes de que se reparta espacio */
-            flex-basis: 2;
+            /* tamaño por defecto antes de que se reparta espacio sobrante */
+            flex-basis: 15%;
         }
-
         #item2{
             /* orden del elemento */
-            order: 1;
+            order:1;
             /* si sobra espacio, peso para repartirlo */
             flex-grow: 8;
             /* tamaño por defecto antes de que se reparta espacio sobrante */
-            flex-basis: 3;
-            /* alineamiento individual del item */
-            align-self: flex-end;
-        }
+            flex-basis: 35%;
 
+            /* alineamiento individual del item */
+            align-self: stretch;
+        }
         #item3{
             /* orden del elemento */
-            order: 2;
+            order:2;
             /* si sobra espacio, peso para repartirlo */
             flex-grow: 4;
             /* tamaño por defecto antes de que se reparta espacio sobrante */
             flex-basis: 50%;
-            /* propiedad shorthand flex (grow, shrink, basis) */
-            flex: 2 0 30%;
-        }
+            
+            /* propiedad shorthand flex (grow,shrink, basis) */
+            flex:2 0 30%; 
+        }      
+        
 
     </style>
-
 </head>
-
 <body>
     <div class="contenedor-flex">
-
-        <div>Elemento 1</div>
-        <div>Elemento 2</div>
-        <div>Elemento 3</div>
-        <div>Elemento 1</div>
-        <div>Elemento 2</div>
-        <div>Elemento 3</div>
-        <div>Elemento 1</div>
-        <div>Elemento 2</div>
-        <div>Elemento 3</div>
-        <div>Elemento 1</div>
-        <div>Elemento 2</div>
-        <div>Elemento 3</div>
-        
+        <div>elemento 1</div>
+        <div>elemento 2</div>
+        <div>elemento 3</div>
+        <div>elemento 1</div>
+        <div>elemento 2</div>
+        <div>elemento 3</div>
+        <div>elemento 1</div>
+        <div>elemento 2</div>
+        <div>elemento 3</div>
+        <div>elemento 1</div>
+        <div>elemento 2</div>
+        <div>elemento 3</div>
     </div>
-
+    
     <div class="container-flex">
-
-        <div>Texto centrado</div>
-
+        <div>texto centrado</div>
     </div>
-
+    
+    
     <div class="cont-flex">
-
-        <div id="item1">Elemento 1</div>
-        <div id="item2">Elemento 2</div>
-        <div id="item3">Elemento 3</div>
-
+        <div id="item1">elemento 1</div>
+        <div id="item2">elemento 2</div>
+        <div id="item3">elemento 3</div>
     </div>
-
-    <div style="width: 80%; height: 200px; border: solid;">
-    <div style="width: 100px; height: 40px; background-color: blue; margin:80px auto;"></div>
 
 </body>
-
 </html>

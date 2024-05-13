@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Ejercicio Practico Flex</title>
+    <style type="text/css">
+        #contenedor_principal{
+            display: flex;
+            flex-flow: column;
+            width:80%;
+        }
+        header{
+            display: flex;
+            justify-content: center;
+            border-bottom:grey 2px solid;
+        }        
+        #primero{
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            height:450px;
+        }
+        #primero nav{flex-basis:10%;}
+        #primero figure#importante{flex-basis:60%;}
+        #primero figure{flex-basis:30%; border:grey 2px solid; border-radius: 15px; padding:20px; 
+            display:flex; flex-direction: column; justify-content: flex-start;align-items: center;}
+            
+
+        #primero nav ul {list-style: none; line-height: 250%;}
+
+        #segundo{display: flex; justify-content: flex-end; align-items: stretch;}
+            #segundo figure{flex-basis: 20%; border:grey 2px solid; border-radius: 15px; padding:20px;}
+
+        img{width:250px;max-width: 100%;}
+
+        footer{display: flex; border-top:gray 2px solid; justify-content: space-between; height:150px; align-items: center;}
+    </style>
+
+</head>
+<body>
+
+    <div id="contenedor_principal">
+
+        <header>
+            <h1> Ejemplo de Maquetación con Flex </h1>
+        </header>
+
+        <main class="todo">
+
+            <section id="primero">
+
+                <nav>
+                    <ul>
+                        <li> Inicio </li>
+                        <li> Galeria </li>
+                        <li> Productos </li>
+                        <li> Clientes </li>
+                        <li> Sobre nosotros </li>
+                        <li> Contacto </li>
+                    </ul>
+                </nav>
+
+                <figure id="importante">
+                    <img src="img/img1.png">
+                    <figcaption> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet volutpat
+                                lacus. Phasellus et posuere tortor. Fusce id molestie diam, vitae tincidunt elit. Nunc sit amet volutpat
+                                lacus.</figcaption>
+                </figure>
+
+                <figure>
+                    <img style="transform:rotate(40deg) scale(2)" src="img/img2.png">
+                    <figcaption><strong> Una imagen bonita de un cielo </strong></figcaption>
+                </figure>
+
+            </section>
+
+            <section id="segundo">
+
+                    <figure>
+                        <img src="img/img3.png">
+                        <figcaption><strong> Una imagen bonita de un cielo </strong></figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="img/img1.png">
+                        <figcaption><strong> Una imagen bonita de un cielo </strong></figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="img/img2.png">
+                        <figcaption><strong> Una imagen bonita de un cielo </strong></figcaption>
+                    </figure>
+
+            </section>
+
+        </main>
+
+        <footer>
+
+            <p> C/Principal<br>
+                Linares </p>
+
+            <h2>Todas las fotos realizadas por @pekechis bajo la licencia CC BY-SA</h2>
+
+            <main id="imagenes">
+
+                <img src="img/snapchat.jpg">
+                <img src="img/facebook.jpg">
+                <img src="img/twitter.jpg">
+
+            </main>
+
+        </footer>
+
+    </div>
+
+</body>
+</html>
