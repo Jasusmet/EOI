@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>enlaces</title>
+    <!-- FAVICON PARA LA PÁGINA -->
+    <link rel="icon" type="image/png" href="imagenes/favicon-32x32.png">
+    <link rel="icon" type="image/ico" href="imagenes/favicon.ico">
+</head>
+<body>
+
+    <!-- EJEMPLOS DE ENLACES BÁSICOS -->
+
+    <!-- Url absoluta -->
+    <a href="https://www.marca.com" name="enlace1" title="el titulo del enlace">ENLACE ABSOLUTO</a>
+    <br/>
+    <!-- Url relativa -->
+    <a href="../Bloque 2/reglas_texto.html" name="enlace1" title="el titulo del enlace">ENLACE RELATIVO</a>
+
+    <!-- Navegación interna - USANDO IDS -->
+    <div id="=caja1" style="height: 1000px; background-color: red;"></div>
+    <a href="#caja2" name="primera">ENLACE a caja 2</a>
+    <p>algo de ejemplo de texto</p>
+
+    <div id="=caja2" style="height: 1400px; background-color: blue;"></div>
+    <a href="#caja1" name="primera">ENLACE a caja 1</a>
+    <p>algo de ejemplo de texto mas abajo</p>
+
+    <!-- Otros atributos del enlace -->
+    <a href="https://www.marca.com" target="_blank">enlace que se abre en una nueva pestaña o ventana</a>
+
+    <!-- Otros tipos de enlaces -->
+    <link rel="stylesheet" type="text/css" href="ruta hasta el archivo CSS"/>
+    <!-- SCRIPT PUEDE ESTAR  -->
+    <script type="text/javascript">
+        // JAVASCRIPT DE TURNO
+        window.onload = function () {alert ("La página se ha cargado completamente");}
+    </script>
+    <br/>
+    <br/>
+
+    <!-- ENLACES A CORREOS Y TELÉFONOS -->
+    <a href="mailto:luisperez@ejemplo.com?subject=formulario de contactos">contacta conmigo</a>
+    <a href="tel:999666000">llámame</a>
+
+</body>
+</html>

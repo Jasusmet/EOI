@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selectores_adicionales</title>
+    <style type="text/css">
+
+        /* básicos: 
+        - universal, etiqueta, descendente, id, clase avanzados: 
+ 
+        - selector hijo directo (p>a) */
+ 
+        div>span{color:red;}
+ 
+        /* - selector adyacente (p+p) */
+ 
+        div+div{border:dotted 3px;}
+ 
+ 
+        /* - selectores de atributo (a[xxx]) 
+ 
+        - si tiene el atributo
+ 
+        -> elemento[nombre_atributo]
+        -> span[title]{} - cualquier span que tenga el atributo title */
+ 
+        div[title]{font-size: 40px;}
+ 
+        /* - si el atributo es igual a tal valor 
+ 
+        -> elemento[nombre_atributo=valor]
+        -> input[type="password"]{} - cualquier input cuyo atributo type = password
+        -> a[href="google.com"]{}
+        -> img[width="100"] */
+ 
+        div[title=x]{font-size:80px;}
+ 
+        /* - si uno de los valores del atributo es igual a tal valor
+ 
+        -> elemento[nombre_atributo~=valor]
+        -> p[class~=destacado] - cualquier párrafo cuyo atributo class tenga en uno de sus valores "destacado" */
+ 
+        /* - selector enésimo hijo
+ 
+        - p:nth-child(2n) - párrafo que sea un hijo par de un contenedor */
+ 
+        div:nth-child(2n+1){border:solid red;}
+ 
+        /* enésimo hijo  
+ 
+        div:nth-child(n){background: red;}
+        div:nth-child(2n+1){background: yellow;}
+        div:nth-child(3n+1){background: green;}
+ 
+        enésimo de un tipo */
+ 
+        section:nth-of-type(n){background: blue;}
+        div:nth-of-type(3n+2){background: pink;}
+ 
+        /* pseudo-clases y pseudo-elementos pseudo-estados -> 
+ 
+        PARA CUALQUIER ELEMENTO
+ 
+        - :active -> cuando tengo el ratón pulsado sobre un elemento
+        - :hover -> cuando tengo el cursor sobre un elemento
+ 
+        SÓLO PARA ENLACES
+ 
+        - :link -> cuando soy un enlace que no ha sido visitado 
+        - :visited -> cuando un enlace ya ha sido visitado (y está en violeta)
+ 
+        GENERALMENTE PARA ELEMENTOS DE FORMULARIO
+ 
+        - :focus -> cuando el elemento tiene el foco
+        - :checked -> cuando un elemento/casilla está seleccionado */
+ 
+        input:focus{background-color:green;}
+        label:active{background-color: red;}
+        h5:hover{font-size: 120px;}
+ 
+        /* lo contrario todo elemento que no sea una sección todo elemento que no tenga class destacado */
+ 
+        :not(section){background: gray;}
+        :not(.destacado){font-weight: 900;}
+ 
+        /* pseudo-elementos -> ::after ::before ::selection */
+ 
+        span::before {
+            content: "«";
+            color:blue;
+        }
+ 
+        span::after {
+            content: "?";
+            color:green;
+        }
+ 
+        a::after {
+            content: " ( " attr(href) " )";
+        }
+ 
+        p::selection{background-color: blueviolet;}
+ 
+    </style>
+</head>
+
+<body>
+
+    <section>
+
+        <div>1
+            <span>Soy un span, hijo directo del div</span>
+        </div>
+
+        <div>2
+            <p>Soy un párrafo con un 
+                <span>span descendiente pero no hijo directo del div</span>
+            </p>
+        </div>
+
+        <div>3</div>
+
+        <div>4</div>
+
+        <div>5</div>
+
+        <div>6</div>
+
+        <div title="x">7</div>
+
+        <div>8</div>
+
+        <div>9</div>
+
+        <div title="z">10</div>
+
+        <div>11</div>
+
+        <div>12</div>
+
+        <div>13</div>
+
+        <div>14</div>
+
+        <div>15</div>
+
+        <div>16</div>
+
+    </section>
+
+</body>
+
+</html>

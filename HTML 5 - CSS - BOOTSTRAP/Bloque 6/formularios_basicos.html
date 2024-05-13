@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formularios_basicos</title>
+
+    <style type="text/css">
+          form#formulario_registro{background: gold;}
+        form#formulario_registro label{font:500 11px Arial; text-shadow: black 1px 1px 4px;}
+        form#formulario_registro input[type = submit] {background: red; margin-left: 40px;}
+
+        /* Cambio de estética si el campo no valida usando la pseudoclase invalid */
+        input:invalid{border: solid b; background-color: salmon;}
+        textarea{resize: none;}
+    </style>
+
+</head>
+
+<body>
+
+        <!-- action: url a donde envio la info
+        method: método de envío (get o post)
+        enctype: tipo de codificación - si hay archivos incluir multiparts/form-data -->
+        <form id="formulario_registro" method="get" enctype="multipart/form-data" onsubmit="alert('enviado')">
+        
+        <!-- Label apunta al id del elemento input que acompaña -->
+        <!-- Campo input tipo text: -->
+        <label for="correo">Email:</label>
+        <input type="text" name="email" id="correo" value="" placeholder="pon tu nombre" minlength="8" maxlength="15"/><br />
+
+        <!-- Campo input tipo password: -->
+        <label for="pwd">Password:</label>
+        <input type="password" name="pass" id="pwd" value="" size="10" maxlength="10"/><br />
+
+        <!-- Campo input tipo checkbox - opciones no excluyentes -->
+        Idiomas: <br/>
+        <label>
+            Inglés:
+            <input type="checkbox" name="ingles" id="eng" value="ingles" /> <br />
+            </label>
+            <label>
+            Francés:
+            <input type="checkbox" name="frances" id="fra" value="frances" checked/> <br />
+            </label>
+            <label>
+            Alemán:
+            <input type="checkbox" name="aleman" id="deu" value="aleman" /> <br />
+        </label>
+
+        <!-- Campo input tipo radio - opciones excluyentes, relacionadas entre si -->
+        Sexo: <br />
+          <label for="h">
+            Hombre:
+            <input type="radio" name="sexo" id="h" value="hombre" /><br />
+          </label>
+          <label for="m">
+            Mujer:
+            <input type="radio" name="sexo" id="m" value="mujer" /> <br />
+            </label>
+
+        <!-- Campo input tipo submit - para enviar el formulario -->
+        <input type="submit" value="Enviar Formulario" name="envio" /><br />
+
+        <!-- Campo input tipo reset - para limpiar el formulario -->
+        <input type="reset" value="Limpiar Formulario" /> <br /><br />
+
+        <!-- Campo input tipo file - para el manejo de archivos -->
+        <label for="archivo">Selecciona un archivo: </label> <br />
+        <input type="file" name="file" id="archivo" /><br />
+
+        <!-- Campo input tipo hidden - soy un valor ocultooo  -->
+        <input type="hidden" name="oculto" />
+
+        <!-- Campo input tipo botón - botón genérico para lanzar alguna acción -->
+        <input type="button" value="Guardar los cambios" name="guardar" onclick="alert('ya he guardado, leñe!')" /><br />
+        <input type="image" src="favicon-32x32.png" /> <br />
+
+        <!-- Campo input tipo imagen - permite usar la imagen como bóton de "summit" -->
+        <input type="number" name="zzz" min="0" max="40" step="4" required />
+
+        <!-- Opciones de validación: min/maxlength, min, max, required, step, placeholder -->
+        Email: <imput type="email" name="email"/><br />
+
+        DNI: <imput type="text" name="dni" pattern="[0-9]{8}[A-Za-z]{1}"/><br />
+
+        <br/>
+
+        <!-- Ejemplo de un desplegable select con varias opciones -->
+        <select name="pais">
+            <option value="esp">España</option>
+            <option value="nz">Nueva Zelanda</option>
+            <option value="aus">Australia</option>
+        </select>
+        <!-- Ejemplo de un desplegable select con grupos de opciones -->
+        <select name="equipo">
+            <option selected disabled> selecciona una opción</option>
+            <optgroup label="1a división">
+                <option value="value1">opción 1</option>
+                <option value="value2">opción 2</option>
+            </optgroup>
+            <optgroup label="2a división">
+                <option value="value3">opción 3</option>
+                <option value="value3">opción 3</option>
+                <option value="value3">opción 3</option>
+            </optgroup>
+        </select>
+
+        <br>
+
+        <label for="comm">Introduce tus comentarios</label><br/>
+        <textarea name="comentarios" id="comm" rows="10" cols="40"></textarea>
+        
+        </form>
+        
+</body>
+
+</html>
