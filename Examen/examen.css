@@ -1,0 +1,199 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Work Sans';
+    margin: 0;
+    padding: 0;
+}
+html{
+    /* Me permite deslizar cuando hago clic en los links del menu */
+    scroll-behavior: smooth;
+}
+/* SECCIÓN HEADER */
+header {
+    background-color: green;
+    padding: 20px;
+    color: #fff;
+}
+/* SECCIÓN MENÚ */
+.logo{
+    display: flex;
+    width: 300px;
+    position: relative;
+    left: 42%;
+}
+.contenedor-header header{
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+.contenedor-header header .logo a{
+    font-family: 'Righteous';
+    font-size: 36px;
+    color: #fff;
+    text-decoration: none;
+}
+.contenedor-header header ul{
+    display: flex;
+    list-style: none;
+}
+.contenedor-header header nav ul li a{
+    text-align: none;
+    color: #fff;
+    margin: 0 15px;
+    padding: 3px;
+    transition: .5s;
+    text-decoration: none;
+}
+.contenedor-header header nav ul li a:hover{
+    color: black;
+}
+.nav-responsive{
+    color:#fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+/* SECCION CONTACTO */
+.contacto{
+    background-color: #fff;
+    color: #252A2E;
+    padding: 50px 0;
+}
+.contacto .tit{
+    background-color: green;
+    color: #fff;
+    padding: 0px;
+}
+.contacto .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.contacto h2{
+    font-size: 48px;
+    text-align: center;
+    padding: 20px 0;
+}
+.contacto .fila{
+    display: flex;
+}
+.contacto .col{
+    width: 50%;
+    padding: 10px;
+    position: relative;
+}
+.contacto .col input, .contacto .col textarea{
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    margin-bottom: 20px;
+    background-color: #fff;
+    color: #252A2E;
+    font-size: 18px;
+}
+.contacto button{
+    cursor:auto;
+    background-color: green;
+    border: 2px solid #fff;
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: #fff;
+    position: relative;
+    z-index: 10;
+}
+.contacto .col2{
+    position: relative;
+    top: -40%;
+    background-color: green;
+    padding: 17px;
+    max-width: 500%;
+    left: 115%;
+    transform: translate(-50%, -50%);
+}
+.contacto .p{
+    position: relative;
+    top: -30%;
+    background-color: transparent;
+    padding: 20px;
+    max-width: 207px;
+    left: 149%;
+    transform: translate(-50%, -50%);
+}
+/* SECCIÓN MULTIMEDIA */
+.contenedor1 {
+    position: relative;
+    top: -319;
+    left: 600;
+}
+
+.contenedor2 {
+    position: relative;
+    top: -148;
+    left: 170;
+}
+
+.contenedor3 {
+    position:relative;
+    top: 20;
+    left: -169;
+}
+
+.contenedor4 {
+    position: relative;
+    top: -148;
+    right: -169;
+}
+/* SECCIÓN SECCIÓN */
+.sección{
+    background-color: #fff;
+    color: #252A2E;
+    padding: 50px 0;
+}
+.sección.tit h2{
+    background-color: green;
+    color: #fff;
+    padding: 0px;
+}
+.sección .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.sección h2{
+    font-size: 48px;
+    text-align: center;
+    padding: 20px 0;
+}
+.sección .fila{
+    display: flex;
+}
+.sección .col-1{
+    max-width: 50%;
+    padding: 10px;
+    position: relative;
+}
+.sección .col-2{
+    max-width: 50%;
+    padding: 10px;
+    position: relative;
+}
+.sección .col-3{
+    max-width: 50%;
+    padding: 10px;
+    position: relative;
+}
+/* SECCIÓN FOOTER */
+.contenido-footer{
+    background-color: green;
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+    color: #fff;
+}
